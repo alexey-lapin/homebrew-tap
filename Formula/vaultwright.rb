@@ -5,21 +5,21 @@
 class Vaultwright < Formula
   desc "Build an encrypted, embedded static-file server from a single binary"
   homepage "https://github.com/alexey-lapin/vaultwright"
-  version "0.0.5"
+  version "0.0.6"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/alexey-lapin/vaultwright/releases/download/v0.0.5/vaultwright_0.0.5_darwin_amd64.tar.gz"
-      sha256 "ba8205b6d9acbb59f9c210257f7d4cae961980dcab4ab3980372a579fd6c3464"
+      url "https://github.com/alexey-lapin/vaultwright/releases/download/v0.0.6/vaultwright_0.0.6_darwin_amd64.tar.gz"
+      sha256 "3bdabc2de4c44d9b0a3d4ddcf32f283c0d1fa05ba68140a27027de55f994e889"
 
       define_method(:install) do
         bin.install "vaultwright"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/alexey-lapin/vaultwright/releases/download/v0.0.5/vaultwright_0.0.5_darwin_arm64.tar.gz"
-      sha256 "76c959a9cf516de267e3943165f8070a973b9e6c4b234f0913d4c7fcd18f12c8"
+      url "https://github.com/alexey-lapin/vaultwright/releases/download/v0.0.6/vaultwright_0.0.6_darwin_arm64.tar.gz"
+      sha256 "48fd6dbb826267eab09885e4b6ec9532cde1f2695c5b615f7115ef05fc07e384"
 
       define_method(:install) do
         bin.install "vaultwright"
@@ -29,15 +29,15 @@ class Vaultwright < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/alexey-lapin/vaultwright/releases/download/v0.0.5/vaultwright_0.0.5_linux_amd64.tar.gz"
-      sha256 "7b2e43cc0a7278166289d2d96adf0db91caae655ff1560ddf26772d1fdcbef8e"
+      url "https://github.com/alexey-lapin/vaultwright/releases/download/v0.0.6/vaultwright_0.0.6_linux_amd64.tar.gz"
+      sha256 "5d947097771839a0f0f0df867ffc4d2b204c4a2d5e948f0fc609511a18209c97"
       define_method(:install) do
         bin.install "vaultwright"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/alexey-lapin/vaultwright/releases/download/v0.0.5/vaultwright_0.0.5_linux_arm64.tar.gz"
-      sha256 "4ced13b6aab4cdb59afada935b8b4fbfa09a9ac3cbc1d54b4125354aeb100823"
+      url "https://github.com/alexey-lapin/vaultwright/releases/download/v0.0.6/vaultwright_0.0.6_linux_arm64.tar.gz"
+      sha256 "ebf6d14c65148bfc7ee35f6986d7af5024ef19db5f20c6d9da79e690f36b031d"
       define_method(:install) do
         bin.install "vaultwright"
       end
