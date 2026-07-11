@@ -5,41 +5,53 @@
 class Vaultwright < Formula
   desc "Build an encrypted, embedded static-file server from a single binary"
   homepage "https://github.com/alexey-lapin/vaultwright"
-  version "0.0.7"
+  version "0.0.8"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/alexey-lapin/vaultwright/releases/download/v0.0.7/vaultwright_0.0.7_darwin_amd64.tar.gz"
-      sha256 "7ea60be291f130f6cbd46e35cc26b11ad8103d989b024207e3adadbd420b7b87"
+      url "https://github.com/alexey-lapin/vaultwright/releases/download/v0.0.8/vaultwright_0.0.8_darwin_amd64.tar.gz"
+      sha256 "f4d428fe98fa3f9f2565339f67eabbf08d82bee0bc06d07d7589fa95f4771b06"
 
       define_method(:install) do
         bin.install "vaultwright"
+        bash_completion.install "completions/vaultwright.bash" => "vaultwright"
+        zsh_completion.install "completions/vaultwright.zsh" => "_vaultwright"
+        fish_completion.install "completions/vaultwright.fish" => "vaultwright.fish"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/alexey-lapin/vaultwright/releases/download/v0.0.7/vaultwright_0.0.7_darwin_arm64.tar.gz"
-      sha256 "ea4eecd55e0eb81f954de9fde07b5c29ae166bc4f35b372ee8a072b7e11f6beb"
+      url "https://github.com/alexey-lapin/vaultwright/releases/download/v0.0.8/vaultwright_0.0.8_darwin_arm64.tar.gz"
+      sha256 "b4816b8b5d7645122f71ff7d800ea40111fa1f4f2c23f3e7ddd324caaa915dc2"
 
       define_method(:install) do
         bin.install "vaultwright"
+        bash_completion.install "completions/vaultwright.bash" => "vaultwright"
+        zsh_completion.install "completions/vaultwright.zsh" => "_vaultwright"
+        fish_completion.install "completions/vaultwright.fish" => "vaultwright.fish"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/alexey-lapin/vaultwright/releases/download/v0.0.7/vaultwright_0.0.7_linux_amd64.tar.gz"
-      sha256 "68d2809406f919afcde05af4e412ee58e1e6201092ee74b225da78e15ec913e2"
+      url "https://github.com/alexey-lapin/vaultwright/releases/download/v0.0.8/vaultwright_0.0.8_linux_amd64.tar.gz"
+      sha256 "9561bb1b3d0b2e25e7299dd1f3470c91ca47e0030512e73b7fa3292ae8f7dcc8"
       define_method(:install) do
         bin.install "vaultwright"
+        bash_completion.install "completions/vaultwright.bash" => "vaultwright"
+        zsh_completion.install "completions/vaultwright.zsh" => "_vaultwright"
+        fish_completion.install "completions/vaultwright.fish" => "vaultwright.fish"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/alexey-lapin/vaultwright/releases/download/v0.0.7/vaultwright_0.0.7_linux_arm64.tar.gz"
-      sha256 "fcd019fb1c2838aed9d827d77e7a6ca33b09d0b26e14deb351c7289fd2afa760"
+      url "https://github.com/alexey-lapin/vaultwright/releases/download/v0.0.8/vaultwright_0.0.8_linux_arm64.tar.gz"
+      sha256 "0bbcb86240b09ffa318215740b78539213f7a136e3039e0eed34bbe860cdbd4b"
       define_method(:install) do
         bin.install "vaultwright"
+        bash_completion.install "completions/vaultwright.bash" => "vaultwright"
+        zsh_completion.install "completions/vaultwright.zsh" => "_vaultwright"
+        fish_completion.install "completions/vaultwright.fish" => "vaultwright.fish"
       end
     end
   end
